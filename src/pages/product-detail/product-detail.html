@@ -1,0 +1,45 @@
+<ion-header no-shadow>
+    <ion-navbar>
+        <ion-title>
+            Details
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <div class="image">
+        <img [src]="product.product_image" />
+    </div>
+    <div class="details-container">
+        <div padding class="product">
+            <div class="title">{{product.product_name}}</div>
+            <div class="description" [innerHTML]="product.short_description"></div>
+            <div class="variants">
+                <div class="variant" *ngFor="let sp of subproducts">
+                    <div class="variant-title">{{sp.subproduct_name}}</div>
+                    <ion-list radio-group [(ngModel)]="sp.selected_id" (ionChange)="optionChanged(sp)">
+                        <ion-item *ngFor="let o of sp.options">
+                            <ion-label text-wrap>{{o.option_name}}<span class="option-price" *ngIf="o.show_price"><br />{{o.price_text}}</span></ion-label>
+                            <ion-radio color="dark" [value]="o.id"></ion-radio>
+                        </ion-item>
+                    </ion-list>
+                </div>
+            </div>
+        </div>
+        <div padding>
+            <div class="total-container">
+                {{globals.currencySymbol}}{{product.product_price}}
+            </div>
+            <div class="quantity-container">
+                <quantity-modifier [quantity]="quantity" (quantityChange)="quantityChanged($event)"></quantity-modifier>
+            </div>
+            <div class="clearfix"></div>
+            <div class="add-container">
+                <button ion-button block large round color="primary" (click)="addToCartClick()">
+                    ADD TO CART
+                    &nbsp;&nbsp;
+                    <span class="total-amount">{{globals.currencySymbol}}{{totalAmount}}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</ion-content>

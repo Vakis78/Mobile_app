@@ -1,0 +1,37 @@
+page-select-pin {
+    .footer {
+        background-color: #FFFFFF;
+    }
+    
+    .map-container {
+        width: 100%;
+        height: calc(100% - 10px);
+        overflow: hidden;
+    }
+
+    .map-container .gmap {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .full-address {
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: #000000;
+        margin-top: 10px;
+    }
+
+    .done-button {
+        margin-top: 10px;
+    }
+
+    .custom-map-control-button {
+        background-color: #FFFFFF;
+        color: #000000;
+        padding: 15px;
+        font-size: 1.5rem;
+        margin-top: 15px;
+        min-width: 150px;
+    }
+}

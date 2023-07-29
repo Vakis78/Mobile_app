@@ -1,0 +1,63 @@
+page-offers {
+    .locations {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .locations .location {
+        margin-top: 20px;
+        position: relative;
+        background-color: $item-background-color;
+        background: $item-background;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .locations .location .image {
+        width: 180px;
+        height: 150px;
+        border-radius: 15px;
+        border-width: 2px;
+        border-color: #ffffff;
+        border-style: solid;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .locations .location .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .locations .location .info-container {
+        margin-top: 20px;
+    }
+
+    .locations .location .company-name {
+        color: #ffffff;
+        font-size: 1.60rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .locations .location .separator {
+        margin-top: 20px;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(0,0,0,0.10);
+        content: " ";
+        display: "block";
+    }
+
+    .locations .location .open {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.5rem;
+        color: #ffffff;
+    }
+}

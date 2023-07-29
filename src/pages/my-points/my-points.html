@@ -1,0 +1,42 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            My Points
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <div text-center padding *ngIf="loading">
+        <ion-spinner></ion-spinner>
+    </div>
+    <div class="locations">
+        <div *ngFor="let location of points">
+            <div padding>
+                <div class="location" (click)="locationClick(location)">
+                    <div class="image">
+                        <img [src]="location.company_logo" />
+                    </div>
+                    <div class="info-container">
+                        <div class="company-name">My Points</div>
+                        <div class="total-points">{{location.total_points}}</div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="open">
+                        <button ion-button small round outline color="light">View Rewards</button>
+                    </div>
+                </div>
+            </div>
+            <div class="common-header-text rewards-heading" *ngIf="!loading">Points History</div>
+            <div class="reward" *ngFor="let reward of location.rewards">
+                <div class="reward-name">
+                    {{reward.name}}
+                    <div class="reward-date">{{reward.visited_str}}</div>
+                </div>
+                <div class="points-container">
+                    <div class="reward-points">{{reward.sign}}{{reward.points}}</div>
+                    <div class="reward-points-title">Pts</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

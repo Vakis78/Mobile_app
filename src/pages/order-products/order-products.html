@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{pageTitle}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <div class="locations">
+        <div class="location">
+            <div class="image">
+                <img [src]="order.company_logo" />
+            </div>
+            <div class="info-container" style="width: 100%;">
+                <!-- <div class="company-name">{{order.company_name}}</div> -->
+                <div class="branch-name">{{order.branch_name}}</div>
+                <div class="branch-address"><ion-icon name="md-pin"></ion-icon>&nbsp;&nbsp;{{order.branch_address}}</div>
+                <div class="total-points">Total: €{{order.order_total}}</div>
+                <div class="order-number">Order#{{order.order_number}}</div>
+                <div class="order-date">{{order.order_dt_str}}</div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="separator"></div>
+        </div>
+    </div>
+    <div text-center padding *ngIf="loading">
+        <ion-spinner></ion-spinner>
+    </div>
+    <div class="locations">
+        <div class="location" *ngFor="let location of points" (click)="locationClick(location)">
+            <div class="product-image">
+                <img [src]="location.product_image" />
+            </div>
+            <div class="info-container">
+                <div class="product-name">{{location.product_name}}</div>
+                <div class="product-quantity">€{{location.price}} x {{location.quantity}}</div>
+                <div class="product-total"><b>€{{location.total}}</b></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="separator"></div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer padding *ngIf="canTrack">
+    <button ion-button block small round outline color="primary" (click)="trackOrder()">Track Order</button>
+</ion-footer>

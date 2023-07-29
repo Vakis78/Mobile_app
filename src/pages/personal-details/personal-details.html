@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Profile
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="editClick()">
+                <ion-icon name="md-create"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="profile-pic">
+        <img [src]="loginData.profile_pic_url" />
+    </div>
+    <div class="profile-name">
+        {{loginData.name}}
+    </div>
+    <div class="profile-location">
+        {{loginData.location}}
+    </div>
+    <div class="profile-section">
+        <div class="icon-container">
+            <div class="icon-outer">
+                <ion-icon name="md-call"></ion-icon>
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="info-label">Mobile Phone</div>
+            <div class="info-value">{{loginData.phone}}</div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="profile-section">
+        <div class="icon-container">
+            <div class="icon-outer">
+                <ion-icon name="md-mail"></ion-icon>
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="info-label">Email Address</div>
+            <div class="info-value">{{loginData.email}}</div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="profile-section">
+        <div class="icon-container">
+            <div class="icon-outer">
+                <ion-icon name="md-pin"></ion-icon>
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="info-label">Address</div>
+            <div class="info-value">{{loginData.address}}</div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</ion-content>

@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Products
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <div class="search-container">
+        <div class="search-input">
+            <ion-input type="text" [(ngModel)]="searchText" placeholder="Search beverages or foods" (ionChange)="searchChanged()"></ion-input>
+        </div>
+        <div class="search-icon">
+            <ion-icon name="md-search"></ion-icon>
+        </div>
+    </div>
+    <div class="categories-section">
+        <div class="categories">
+            <div class="category" *ngFor="let category of categories" [ngClass]="{'selected': category.selected}" (click)="categoryClick(category)">
+                <div class="category-name">
+                    {{category.category_name}}
+                </div>
+            </div>
+        </div>
+        <div class="categories">
+            <div class="category" *ngFor="let category of subCategories" [ngClass]="{'selected': category.selected}" (click)="subCategoryClick(category)">
+                <div class="category-name">
+                    {{category.sub_category_name}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div text-center padding *ngIf="loading">
+        <ion-spinner></ion-spinner>
+    </div>
+    <div padding>
+        <div *ngFor="let p of products" class="product">
+            <div class="image">
+                <img [src]="p.product_image" />
+            </div>    
+            <div class="info-container">  
+                <div class="title">
+                    {{p.product_name}}
+                </div>
+                <div class="tags">
+                    {{p.tags}}
+                </div>
+                <div class="price">
+                    {{globals.currencySymbol}}{{p.product_price}}
+                </div>
+                <div class="buy-button">
+                    <button ion-button large round color="primary" (click)="productClick(p)" *ngIf="p.can_buy">
+                        <ion-icon name="md-card"></ion-icon>
+                        &nbsp;&nbsp;
+                        Buy
+                    </button>
+                    <button ion-button large round outline color="primary" *ngIf="p.out_of_stock">
+                        Out of Stock
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer padding>
+    <div *ngIf="showCart">
+        <div class="total-container">
+            Total: {{globals.currencySymbol}}{{totalAmount}}
+        </div>
+        <div class="quantity-container" (click)="viewCartClick()">
+            <ion-icon name="md-cart"></ion-icon>
+            <div class="badge">{{globals.currentCart.products.length}}</div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="view-cart-container">
+            <button ion-button block large round color="primary" (click)="viewCartClick()">GO TO CART</button>
+        </div>
+    </div>
+</ion-footer>

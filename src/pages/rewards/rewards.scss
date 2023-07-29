@@ -1,0 +1,43 @@
+page-rewards {
+    .locations .reward {
+        position: relative;
+        margin-top: 20px;
+        background-color: #ffffff;
+        min-height: 90px;
+        
+        border-bottom: rgba(0,0,0,0.10) 1px solid;
+    }
+
+    .locations .reward .reward-name {
+        color: #000000;
+        font-size: 1.80rem;
+        font-weight: 400;
+
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+    }
+
+    .locations .reward .points-container {
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+    }
+
+    .locations .reward .reward-points {
+        color: color($colors,primary);
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .locations .reward .reward-points-title {
+        color: #aeaeae;
+        font-size: 1.60rem;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+}

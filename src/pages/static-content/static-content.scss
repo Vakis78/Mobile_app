@@ -1,0 +1,12 @@
+page-static-content {
+    .content-container {
+        padding: 15px;
+        height: 100%;
+    }
+    
+    .content-container iframe {
+        width: 100%;
+        height: 100%;
+        border-width: 0px;
+    }
+}

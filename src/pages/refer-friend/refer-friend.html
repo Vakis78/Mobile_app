@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Refer Friends
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <ion-item>
+        <ion-label stacked>Enter upto 10 emails</ion-label>
+        <ion-textarea [(ngModel)]="pageData.friend_lines" rows="10"></ion-textarea>
+    </ion-item>
+    <ion-item no-lines>
+        <ion-label>One email on each line</ion-label>
+    </ion-item>
+</ion-content>
+<ion-footer padding>
+    <button ion-button block large (click)="submitClick()">SUBMIT</button>
+</ion-footer>

@@ -1,0 +1,88 @@
+{
+  "name": "tinhouse",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "start": "ionic-app-scripts serve",
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint"
+  },
+  "dependencies": {
+    "@angular/animations": "5.2.11",
+    "@angular/common": "5.2.11",
+    "@angular/compiler": "5.2.11",
+    "@angular/compiler-cli": "5.2.11",
+    "@angular/core": "5.2.11",
+    "@angular/forms": "5.2.11",
+    "@angular/platform-browser": "5.2.11",
+    "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/core": "4.20.0",
+    "@ionic-native/geolocation": "^4.20.0",
+    "@ionic-native/splash-screen": "4.20.0",
+    "@ionic-native/status-bar": "4.20.0",
+    "@ionic/storage": "2.2.0",
+    "call-number": "^1.0.1",
+    "cordova-android": "10.1.2",
+    "ionic-angular": "3.9.9",
+    "ionicons": "3.0.0",
+    "qrcode": "^1.5.1",
+    "rxjs": "5.5.11",
+    "sw-toolbox": "3.6.0",
+    "zone.js": "0.8.29"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "3.2.4",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-firebasex": "^16.0.0",
+    "cordova-plugin-geolocation": "^4.1.0",
+    "cordova-plugin-inappbrowser": "^5.0.0",
+    "cordova-plugin-ionic-keyboard": "^2.0.5",
+    "cordova-plugin-ionic-webview": "^5.0.0",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "typescript": "2.6.2"
+  },
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-firebasex": {
+        "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "true",
+        "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "true",
+        "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "true",
+        "FIREBASE_FCM_AUTOINIT_ENABLED": "true",
+        "ANDROID_ICON_ACCENT": "#FF00FFFF",
+        "ANDROID_FIREBASE_PERFORMANCE_MONITORING": "false",
+        "ANDROID_PLAY_SERVICES_TAGMANAGER_VERSION": "18.0.2",
+        "ANDROID_PLAY_SERVICES_AUTH_VERSION": "20.4.0",
+        "ANDROID_FIREBASE_ANALYTICS_VERSION": "21.2.0",
+        "ANDROID_FIREBASE_MESSAGING_VERSION": "23.1.0",
+        "ANDROID_FIREBASE_CONFIG_VERSION": "21.2.0",
+        "ANDROID_FIREBASE_PERF_VERSION": "20.3.0",
+        "ANDROID_FIREBASE_AUTH_VERSION": "21.1.0",
+        "ANDROID_FIREBASE_INAPPMESSAGING_VERSION": "20.2.0",
+        "ANDROID_FIREBASE_FIRESTORE_VERSION": "24.4.1",
+        "ANDROID_FIREBASE_FUNCTIONS_VERSION": "20.2.1",
+        "ANDROID_FIREBASE_IID_VERSION": "21.1.0",
+        "ANDROID_FIREBASE_INSTALLATIONS_VERSION": "17.1.0",
+        "ANDROID_FIREBASE_CRASHLYTICS_VERSION": "18.3.2",
+        "ANDROID_FIREBASE_CRASHLYTICS_NDK_VERSION": "18.3.2",
+        "ANDROID_GSON_VERSION": "2.9.0",
+        "ANDROID_FIREBASE_PERF_GRADLE_PLUGIN_VERSION": "1.4.2",
+        "ANDROID_GRPC_OKHTTP": "1.46.0"
+      }
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+page-chat {
+    .message-input-container {
+        border-width: 1px;
+        border-color: #9a9a9a;
+        border-style: solid;
+        border-radius: 15px;
+        padding: 5px;
+        position: relative;
+    }
+
+    .message-send-btn {
+        position: absolute;
+        top: 0;
+        right: 2px;
+        height: 50px;
+        width: 50px;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(0,0,0,0.15);
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 600;
+        padding-top: 5px;
+        padding-left: 5px;
+        color: color($colors,primary);
+    }
+}

@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Offers
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <div text-center padding *ngIf="loading">
+        <ion-spinner></ion-spinner>
+    </div>
+    <div class="locations">
+        <div class="location" *ngFor="let location of points" (click)="locationClick(location)">
+            <div class="image">
+                <img [src]="location.offer_image" />
+            </div>
+            <div class="info-container">
+                <div class="company-name">{{location.offer_title}}</div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="open">
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+            </div>
+            <!-- <div class="separator"></div> -->
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header no-border>
+    <ion-navbar>
+        <div class="logo">
+            <img src="assets/imgs/logo.png" />
+            <span class="logo-title">TIN HOUSE</span>
+        </div>
+    </ion-navbar>
+</ion-header>
+<ion-content padding has-header>
+    <div class="page-heading common-header-text">
+        Create an account
+    </div>
+    <div class="page-sub-heading common-text">
+        Welcome to TIN HOUSE Loyalty App
+    </div>
+    <div class="login-container">
+        <ion-item>
+            <ion-label stacked>Name</ion-label>
+            <ion-input type="text" [(ngModel)]="loginData.name" placeholder="John Doe" autocomplete="off"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="email" maxlength="200" [(ngModel)]="loginData.email" placeholder="johndoe@example.com" autocomplete="off"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Password</ion-label>
+            <ion-input type="password" maxlength="16" [(ngModel)]="loginData.password" placeholder="******" autocomplete="off"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Phone</ion-label>
+            <ion-input type="tel" maxlength="12" [(ngModel)]="loginData.phone" placeholder="+1234555" autocomplete="off"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Birthday</ion-label>
+            <ion-datetime [(ngModel)]="loginData.birthday_value" pickerFormat="MMM D YYYY" displayFormat="MMM D, YYYY"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Refer Code (if any)</ion-label>
+            <ion-input type="tel" maxlength="5" [(ngModel)]="loginData.refer_code" placeholder="00000" autocomplete="off"></ion-input>
+        </ion-item>
+        <div class="register-button">
+            <button ion-button block large round color="gray" (click)="registerClick()">SIGN UP</button>
+        </div>
+        <div class="common-text terms-text" text-center>
+            <span>By tapping "Sign Up" you accept our&nbsp;</span>
+            <a (click)="termsClick()"><b>Privacy Policy</b></a>.
+        </div>
+    </div>
+</ion-content>

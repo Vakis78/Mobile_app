@@ -1,0 +1,86 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+$box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.49);
+$border-common: 1px solid rgba(0,0,0,0.10);
+$item-background-color: rgb(63,63,65);
+$item-background: linear-gradient(0deg, rgba(63,63,65,1) 0%, rgba(14,189,177,1) 0%, rgba(28,91,104,1) 100%);
+
+.toolbar-background, .toolbar-background-ios {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.common-header-text {
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.common-text {
+    font-size: 1.40rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+.label {
+    color: color($colors,gray);
+    font-weight: 600;
+}
+
+button.button-large {
+    height: 46px !important;
+}
+
+button.button-large .button-inner {
+    font-size: 1.25rem;
+}
+
+.clearfix {
+    clear: both;
+}
+
+ion-icon {
+    &[class*="custom-"] {
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+  
+    &[class*="custom-profile"] {
+        mask-image: url(../assets/icon/profile.svg);
+    }
+
+    &[class*="custom-locations"] {
+        mask-image: url(../assets/icon/locations.svg);
+    }
+
+    &[class*="custom-points"] {
+        mask-image: url(../assets/icon/points.svg);
+    }
+
+    &[class*="custom-orders"] {
+        mask-image: url(../assets/icon/orders.svg);
+    }
+
+    &[class*="custom-refer-friend"] {
+        mask-image: url(../assets/icon/refer_friend.svg);
+    }
+}

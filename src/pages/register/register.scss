@@ -1,0 +1,53 @@
+page-register {
+    .logo {
+        position: relative;
+        width: 150px;
+        margin: auto;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .logo .logo-title {
+        display: block;
+        position: absolute;
+        left: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #000000;
+        font-weight: 600;
+        font-size: 1.65rem;
+    }
+
+    .page-heading {
+        margin-top: 0px;
+    }
+
+    .page-sub-heading {
+        margin-top: 10px;
+    }
+    
+    .login-container {
+        background-color:#FFFFFF;
+        margin-top: 15px;
+    }
+
+    .login-container .register-button {
+        margin-top: 20px;
+    }
+
+    .login-container .terms-text {
+        margin-top: 15px;
+        padding-left: 0px;
+        font-size: 1.20rem;
+    }
+
+    .login-container .terms-text span {
+        color: color($colors,gray);
+    }
+
+    .item {
+        padding-left: 0 !important;
+    }
+}

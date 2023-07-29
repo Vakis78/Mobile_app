@@ -1,0 +1,125 @@
+page-track-order {
+    .map-container {
+        width: 100%;
+        height: calc(100% - 10px);
+        overflow: hidden;
+    }
+
+    .map-container .gmap {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .locations {
+        position: fixed;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        //height: 280px;
+        background-color: color($colors,primary);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        overflow: hidden;
+    }
+
+    .locations .top {
+        background-color: inherit;
+        padding: 10px;
+        height: 90px;
+    }
+
+    .locations .top .image {
+        width: 60px;
+        height: 60px;
+        content: " ";
+        background-color: #afafaf;
+        border-radius: 50%;
+        float: left;
+    }
+
+    .locations .top .info {
+        float: left;
+        margin-left: 20px;
+    }
+
+    .locations .top .info .name {
+        color: #FFFFFF;
+        font-size: 1.60rem;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    .locations .top .info .id {
+        color: #FFFFFF;
+        margin-top: 10px;
+        font-size: 1.60rem;
+    }
+
+    .locations .top .btns {
+        float: right;
+        margin-top: 8px;
+    }
+
+    .locations .top .btns .btn {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 2.75rem;
+        color: #FFFFFF;
+        background-color: color($colors,secondary);
+        padding-top: 7px;
+        margin-right: 10px;
+    }
+
+    .locations .sub-locations {
+        width: 100%;
+        height: calc(100% - 90px);
+        background-color: #FFFFFF;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 20px;
+    }
+
+    .locations .sub-locations .location-info.bottom {
+        margin-top: 50px;
+    }
+
+    .locations .sub-locations .location-info .image {
+        float: left;
+        width: 50px;
+        height: 50px;
+        background-color: color($colors,primary);
+        border-radius: 50%;
+        content: " ";
+    }
+
+    .locations .sub-locations .location-info .meta {
+        float: left;
+        margin-left: 20px;
+        width: calc(100% - 50px - 20px);
+    }
+
+    .locations .sub-locations .location-info .meta .location-name {
+        color: #000000;
+        font-weight: 600;
+        font-size: 1.70rem;
+    }
+
+    .locations .sub-locations .location-info .meta .location-address {
+        margin-top: 10px;
+        color: #787878;
+        font-size: 1.60rem;
+    }
+
+    .custom-map-control-button {
+        background-color: #FFFFFF;
+        color: #000000;
+        padding: 15px;
+        font-size: 1.5rem;
+        margin-top: 15px;
+        min-width: 150px;
+    }
+}

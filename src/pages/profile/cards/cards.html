@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            MY CARDS
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="add-card">
+        <button ion-button block large (click)="addPaymentMethodClick()">ADD CARD</button>
+    </div>
+    <div text-center padding *ngIf="loading">
+        <ion-spinner></ion-spinner>
+    </div>
+    <div class="cards-container">
+        <div *ngFor="let card of paymentMethods;let idx=index" class="card" [ngClass]="{'selected': card.selected}" (click)="cardClick(card)">
+            CARD #{{card.display_text}}
+            <div class="delete">
+                <ion-icon name="md-trash" (click)="deleteCard(card,idx)"></ion-icon>
+            </div>
+        </div>
+    </div>
+</ion-content>

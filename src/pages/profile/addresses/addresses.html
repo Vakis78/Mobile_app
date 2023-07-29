@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            My Addresses
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="add-card">
+        <button ion-button block large round outline (click)="addPaymentMethodClick()">ADD ADDRESS</button>
+    </div>
+    <div text-center padding *ngIf="loading">
+        <ion-spinner></ion-spinner>
+    </div>
+    <div class="cards-container">
+        <div *ngFor="let card of paymentMethods;let idx=index" class="card" (click)="cardClick(card)">
+            <div class="title">
+                {{card.address_title}}
+            </div>
+            <div class="title below">
+                {{card.full_address}}
+            </div>
+            <div class="delete">
+                <ion-icon name="md-trash" (click)="deleteCard(card,idx)"></ion-icon>
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,27 @@
+page-slides {
+    .slide-image {
+        width: 150px;
+        margin: auto;
+        margin-top: 0px;
+    }
+
+    .slide-image img {
+        width: 100%;
+    }
+
+    .slide-heading {
+        margin-top: 20px;
+        font-weight: 600;
+        color: #000000;
+        font-size: 2.30rem;
+        text-align: center;
+    }
+
+    .slide-text {
+        margin-top: 20px;
+        font-weight: 400;
+        color: #898989;
+        font-size: 1.80rem;
+        text-align: center;
+    }
+}

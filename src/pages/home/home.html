@@ -1,0 +1,104 @@
+<!-- <ion-header>
+    <ion-navbar>
+        <ion-title>
+            Doono
+        </ion-title>
+    </ion-navbar>
+</ion-header> -->
+<ion-content padding>
+    <!-- <div class="logo">
+        <img src="assets/imgs/logo.png" />
+    </div> -->
+    <div class="welcome-text">
+        <div class="welcome-heading">Welcome</div>
+        <div class="welcome-name">{{welcomeName}}</div>
+    </div>
+    <div class="dashboard-options">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6 col-sm-4>
+                    <div class="dashboard-option" (click)="optionClick('delivery')">
+                        <div class="image">
+                            <img src="assets/imgs/delivery.png" />
+                        </div>
+                        <div class="text">Delivery</div>
+                    </div>
+                </ion-col>
+                <ion-col col-6 col-sm-4>
+                    <div class="dashboard-option" (click)="optionClick('pickup')">
+                        <div class="image">
+                            <img src="assets/imgs/pickup.png" />
+                        </div>
+                        <div class="text">Pickup</div>
+                    </div>
+                </ion-col>
+                <ion-col col-6 col-sm-4>
+                    <div class="dashboard-option" (click)="optionClick('qr')">
+                        <div class="image">
+                            <img src="assets/imgs/qrcode.png" />
+                        </div>
+                        <div class="text">QR Code</div>
+                    </div>
+                </ion-col>
+                <ion-col col-6 col-sm-4>
+                    <div class="dashboard-option" (click)="optionClick('locations')">
+                        <div class="image">
+                            <img src="assets/imgs/locations.png" />
+                        </div>
+                        <div class="text">Locations</div>
+                    </div>
+                </ion-col>
+                <!-- <ion-col col-6 col-sm-4>
+                    <div class="dashboard-option" (click)="optionClick('points')">
+                        <div class="image">
+                            <img src="assets/imgs/points.png" />
+                        </div>
+                        <div class="text">My Points</div>
+                    </div>
+                </ion-col>
+                <ion-col col-6 col-sm-4>
+                    <div class="dashboard-option" (click)="optionClick('refer')">
+                        <div class="image">
+                            <img src="assets/imgs/refer_friend.png" />
+                        </div>
+                        <div class="text">Refer a Friend</div>
+                    </div>
+                </ion-col>
+                <ion-col col-6 col-sm-4>
+                    <div class="dashboard-option" (click)="optionClick('orders')">
+                        <div class="image">
+                            <img src="assets/imgs/orders.png" />
+                        </div>
+                        <div class="text">My Orders</div>
+                    </div>
+                </ion-col> -->
+                <ion-col col-6 col-sm-4>
+                    <div class="dashboard-option" (click)="optionClick('facebook')">
+                        <div class="image">
+                            <img src="assets/imgs/facebook.png" />
+                        </div>
+                        <div class="text">Our Facebook</div>
+                    </div>
+                </ion-col>
+                <ion-col col-6 col-sm-4>
+                    <div class="dashboard-option" (click)="optionClick('instagram')">
+                        <div class="image">
+                            <img src="assets/imgs/instagram.png" />
+                        </div>
+                        <div class="text">Our Instagram</div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>
+<div *ngIf="canShowQr" class="dashboard-qr-code">
+    <div class="close">
+        <div class="close-btn" (click)="closeQrClick()">
+            <ion-icon name="md-close"></ion-icon>
+        </div>
+    </div>
+    <div class="image">
+        <img [src]="qrImageUrl" />
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Tracking Orders
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <div class="map-container">
+        <div [id]="mapId" class="gmap"></div>
+    </div>
+    <div class="locations">
+        <div class="top">
+            <div class="image"></div>
+            <div class="info">
+                <div class="name">{{order.client_name}}</div>
+                <div class="id">ID {{order.order_number}}</div>
+            </div>
+            <div class="btns">
+                <div class="btn" (click)="callClick($event)">
+                    <ion-icon name="ios-call-outline"></ion-icon>
+                </div>
+                <div class="btn" (click)="chatClick($event)">
+                    <ion-icon name="ios-chatbubbles-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="sub-locations">
+            <div class="location-info">
+                <div class="image"></div>
+                <div class="meta">
+                    <div class="location-name">
+                        {{order.destination}}
+                    </div>
+                    <!-- <div class="location-address">
+                        {{order.destination}}
+                    </div> -->
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="location-info bottom">
+                <div class="image"></div>
+                <div class="meta">
+                    <div class="location-name">
+                        {{order.branch_address}}
+                    </div>
+                    <div class="location-address">
+                        Sent at {{sentTime}}
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</ion-content>

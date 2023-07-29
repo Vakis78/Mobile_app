@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            SELECT ADDRESS
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="primary" (click)="doneClick()" *ngIf="selectedCard!=null">
+                <ion-icon name="md-checkmark"></ion-icon>
+            </button>
+            <button ion-button icon-only color="danger" (click)="viewCtrl.dismiss()">
+                <ion-icon name="md-close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="add-card">
+        <button ion-button block large round outline color="primary" (click)="addPaymentMethodClick()">ADD ADDRESS</button>
+    </div>
+    <div text-center padding *ngIf="loading">
+        <ion-spinner></ion-spinner>
+    </div>
+    <div class="cards-container">
+        <div *ngFor="let card of paymentMethods;let idx=index" [ngClass]="{'selected': card.selected}" class="card" (click)="cardClick(card)">
+            <div class="title">
+                {{card.address_title}}
+            </div>
+            <div class="title below">
+                {{card.full_address}}
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 20px;">
+        <button ion-button block large round color="primary" (click)="doneClick()" *ngIf="selectedCard!=null">DONE</button>
+    </div>
+    <div style="margin-top: 40px;">
+        <button ion-button block large round outline color="danger" (click)="viewCtrl.dismiss()">CANCEL</button>
+    </div>
+</ion-content>

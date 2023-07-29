@@ -1,0 +1,20 @@
+page-landing {
+    .tabbar {
+        //background-color: #565656 !important;
+        //background-color: #000000 !important;
+        //background-color: rgba(0,0,0,0.02) !important;
+    }
+
+    .tabs-md[tabsHighlight=true] .tab-highlight {
+        background: color($colors,primary);
+        height: 2px;
+    }
+    
+    .tab-button-text {
+        text-transform: uppercase !important;
+    }
+
+    .tab-button-icon.ion-ios-book-outline:before {
+        content: "\f3e8" !important;
+    }
+}

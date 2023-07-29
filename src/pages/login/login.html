@@ -1,0 +1,42 @@
+<ion-header no-border>
+    <ion-navbar>
+        <div class="logo">
+            <img src="assets/imgs/logo.png" />
+            <span class="logo-title">TIN HOUSE</span>
+        </div>
+    </ion-navbar>
+</ion-header>
+<ion-content padding has-header>
+    <div class="page-heading common-header-text">
+        Sign In
+    </div>
+    <div class="page-sub-heading common-text">
+        Welcome to TIN HOUSE Loyalty App
+    </div>
+    <div class="login-container">
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="email" [(ngModel)]="loginData.email" placeholder="johndoe@example.com" autocomplete="off"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="loginData.password" placeholder="******" autocomplete="off"></ion-input>
+        </ion-item>
+        <div class="login-button">
+            <button ion-button block large round color="primary" (click)="loginClick()">LOGIN</button>
+        </div>
+        <div class="common-text forgot-password">
+            <span>Forgot password?&nbsp;&nbsp;</span>
+            <a (click)="forgotPasswordClick()"><b>Reset here</b></a>
+        </div>
+        <div class="common-text no-account" text-center>
+            Don't have an account?
+        </div>
+        <div class="register-button" text-center>
+            <button ion-button block large round color="yellow" (click)="registerClick()">CREATE AN ACCOUNT</button>
+        </div>
+        <div class="privacy-text" text-center>
+            <a (click)="policyClick()">Privacy Policy</a>
+        </div>
+    </div>
+</ion-content>

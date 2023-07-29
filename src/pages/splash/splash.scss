@@ -1,0 +1,27 @@
+page-splash {
+    .content {
+        background-color: #FFFFFF;
+        //background-color: color($colors,primary);
+        //background-color: #5c8cee;
+    }
+
+    .logo-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 999999;
+    }
+
+    .logo-container .logo {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top:50%;
+        transform: translateY(-50%);
+    }
+
+    .logo-container img {
+        width: 240px;
+    }
+}

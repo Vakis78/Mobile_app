@@ -1,0 +1,103 @@
+page-my-cart {
+    .footer {
+        background-color: #FFFFFF;
+    }
+    
+    .company {
+        padding: 15px;
+    }
+
+    .company .company-logo {
+        float: left;
+    }
+
+    .company-logo .image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0,0,0,0.10);
+        overflow: hidden;
+    }
+
+    .company-logo .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .company .info-container {
+        float: left;
+        padding-left: 20px;
+        width: calc(100% - 100px);
+    }
+
+    .company .company-name {
+        font-size: 1.65rem;
+        color: #000000;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    
+    .company .company-address {
+        margin-top: 5px;
+        color: #565656;
+        font-size: 1.45rem;
+        font-weight: 400;
+    }
+
+    .company .company-phone {
+        margin-top: 8px;
+        color: #565656;
+        font-size: 1.45rem;
+        font-weight: 400;
+        background-color: #dadada;
+        border-radius: 5px;
+        padding: 5px;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .total-container {
+        float: left;
+        font-weight: 600;
+        font-size: 1.75rem;
+    }
+
+    .view-cart-container {
+        margin-top: 0px;
+    }
+
+    .cards-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cards-container .card {
+        margin-top: 15px;
+        background: none;
+        border-radius: 10px;
+        height: 60px;
+        background-color: inherit;
+        /*border-color: #BDA66B;*/
+        border-color: #565656;
+        border-width: 1px;
+        border-style: solid;
+        /*color: #BDA66B;*/
+        color: #565656;
+        font-size: 1.75rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-align: center;
+        padding-top: 18px;
+    }
+    
+    .cards-container .card.selected {
+        /*background: linear-gradient(90deg, #7E6946 0%, #D9BE82 47.97%, #7E6946 100%);*/
+        background-color: #565656;
+        color: #FFFFFF;
+    }
+}

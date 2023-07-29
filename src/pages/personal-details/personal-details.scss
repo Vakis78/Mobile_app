@@ -1,0 +1,80 @@
+page-personal-details {
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin: auto;
+        border-radius: 50%;
+        background-color: #d1d1d1;
+        overflow: hidden;
+    }
+
+    .profile-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .profile-name {
+        margin-top: 20px;
+        color: #000000;
+        text-align: center;
+        font-size: 2.35rem;
+        font-weight: 600;
+    }
+
+    .profile-location {
+        margin-top: 15px;
+        color: color($colors,primary);
+        text-align: center;
+        font-size: 1.85rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .profile-section {
+        margin-top: 25px;
+    }
+
+    .profile-section .icon-container {
+        float: left;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border-color: rgba(0,0,0,0.30);
+        border-width: 2px;
+        border-style: solid;
+        position: relative;
+    }
+
+    .profile-section .icon-container .icon-outer {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        font-size: 2.3rem;
+        color: color($colors,primary);
+    }
+
+    .profile-section .info-container {
+        float: left;
+        margin-left: 15px;
+        width: calc(100% - 55px - 15px);
+    }
+
+    .profile-section .info-container .info-label {
+        font-size: 1.65rem;
+        color: #989898;
+        font-weight: 400;
+        margin-top: 2px;
+    }
+
+    .profile-section .info-container .info-value {
+        font-size: 1.80rem;
+        color: #000000;
+        font-weight: 600;
+        margin-top: 15px;
+    }
+}

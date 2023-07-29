@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons end>
+            <button ion-button icon-only color="primary" (click)="callClick()">
+                <ion-icon name="ios-call-outline"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>{{chatName}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+</ion-content>
+<ion-footer padding no-border>
+    <div class="message-input-container">
+        <div class="message-input">
+            <ion-input type="text" [(ngModel)]="chatMessage" placeholder="Type message..." autocomplete="off"></ion-input>
+        </div>
+        <div class="message-send-btn">
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+        </div>
+    </div>
+</ion-footer>

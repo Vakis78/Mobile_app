@@ -1,0 +1,47 @@
+quantity-modifier {
+    $forecolor: #000000;
+
+    .modify-container {
+        display: inline-block;
+        border-width: 1px;
+        border-color: rgba(0,0,0,0.10);
+        border-style: solid;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    .modify-container .quantity-modify {
+        border-width: 0px;
+        border-color: $forecolor;
+        border-style: solid;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        color: $forecolor;
+        font-size: 1.70rem;
+        font-weight: 600;
+        padding-top: 0px;
+        float: left;
+    }
+
+    .modify-container .quantity {
+        float: left;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 30px;
+        height: 20px;
+        position: relative;
+    }
+
+    .modify-container .quantity .value {
+        color: $forecolor;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+        font-size: 1.65rem;
+    }
+}

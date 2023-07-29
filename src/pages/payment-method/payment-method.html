@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            ADD CARD
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="cancelClick()">
+                <ion-icon name="md-close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-item>
+        <ion-label stacked>Card Holder's Name</ion-label>
+        <ion-input type="text" maxlength="100" autocomplete="off" placeholder="" [(ngModel)]="card.name"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked>Card Number</ion-label>
+        <ion-input type="tel" maxlength="16" autocomplete="off" placeholder="" [(ngModel)]="card.card_number"></ion-input>
+    </ion-item>
+    <div class="half">
+        <ion-item>
+            <ion-label stacked>Exp</ion-label>
+            <ion-input type="text" maxlength="5" (ionChange)="expChanged()" autocomplete="off" placeholder="MM/YY" [(ngModel)]="card.expiry"></ion-input>
+        </ion-item>
+    </div>
+    <div class="half">
+        <ion-item>
+            <ion-label stacked>CVC</ion-label>
+            <ion-input type="tel" maxlength="4" autocomplete="off" placeholder="" [(ngModel)]="card.cvc"></ion-input>
+        </ion-item>
+    </div>
+        <div class="common-button" *ngIf="!saving">
+            <button ion-button block large color="secondary" (click)="submitClick()">ADD CARD</button>
+        </div>
+        <div class="common-button" *ngIf="saving" text-center>
+            <ion-spinner color="secondary"></ion-spinner>
+        </div>
+        <div style="margin-top: 30px;">
+            <button ion-button block large color="danger" (click)="cancelClick()">CANCEL</button>
+        </div>
+</ion-content>

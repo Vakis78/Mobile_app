@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Cart
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <div class="company">
+        <div class="company-logo">
+            <div class="image">
+                <img [src]="location.company_logo" />
+            </div>
+        </div>
+        <div class="info-container">
+            <!-- <div class="company-name">
+                {{location.company_name}} - {{location.branch_name}}
+            </div> -->
+            <div class="company-name">
+                {{location.branch_name}}
+            </div>
+            <div class="company-address">
+                {{location.branch_address}}
+            </div>
+            <div class="company-phone">
+                <ion-icon name="md-call"></ion-icon>
+                {{location.branch_phone}}
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="cart-view-container">
+        <cart-view #cartView></cart-view>
+    </div>
+    <div text-center padding *ngIf="loading">
+        <ion-spinner></ion-spinner>
+    </div>
+    <div class="pickup-details" *ngIf="globals.currentCartType=='pickup'">
+        <ion-item>
+            <ion-label stacked>Pickup Time</ion-label>
+            <ion-datetime [(ngModel)]="pageData.pickup_dt_val" [min]="pageData.min_pickup_dt" [max]="pageData.max_pickup_dt" pickerFormat="DD MMM hh mm A" displayFormat="DD MMM hh:mm A"></ion-datetime>
+        </ion-item>
+    </div>
+    <div class="delivery-details" *ngIf="globals.currentCartType=='delivery'">
+        <ion-item>
+            <ion-label text-wrap>{{globals.currentCartAddress.full_address}}</ion-label>
+            <ion-icon item-end name="md-create" (click)="editAddress()"></ion-icon>
+        </ion-item>
+    </div>
+    <ion-list radio-group [(ngModel)]="pageData.payment_mode">
+        <ion-item>
+            <ion-label>Payment by Cash</ion-label>
+            <ion-radio value="cash" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Payment by Card</ion-label>
+            <ion-radio value="card"></ion-radio>
+        </ion-item>
+    </ion-list>
+    <!-- <div *ngIf="pageData.payment_mode=='card'">
+        <div class="cards-container">
+            <div *ngFor="let card of paymentMethods" class="card" [ngClass]="{'selected': card.selected}" (click)="cardClick(card)">
+                CARD #{{card.display_text}}
+            </div>
+        </div>
+        <div padding class="add-card">
+            <button ion-button block (click)="addPaymentMethodClick()">ADD A CARD</button>
+        </div>
+    </div> -->
+</ion-content>
+<ion-footer padding>
+    <div>
+        <div class="view-cart-container">
+            <button ion-button block large round color="primary" (click)="checkoutClick()">CHECKOUT</button>
+        </div>
+    </div>
+</ion-footer>

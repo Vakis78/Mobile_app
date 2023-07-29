@@ -1,0 +1,33 @@
+page-offer-detail {
+    .location {
+        position: relative;
+    }
+
+    .location .image {
+        width: 200px;
+        margin: auto;
+    }
+
+    .location .image img {
+        width: 100%;
+    }
+
+    .location .info-container {
+        margin-top: 20px;
+    }
+
+    .location .offer-title {
+        color: #000000;
+        font-size: 1.65rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .location .offer-text {
+        color: #000000;
+        font-size: 1.45rem;
+        font-weight: 400;
+        text-align: left;
+        margin-top: 15px;
+    }
+}

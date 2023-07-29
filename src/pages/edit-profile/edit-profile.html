@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Edit Profile
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="login-container">
+        <ion-item>
+            <ion-label stacked>Name</ion-label>
+            <ion-input type="text" [(ngModel)]="loginData.name" placeholder="John Doe" autocomplete="off"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="email" [(ngModel)]="loginData.email" placeholder="johndoe@example.com" autocomplete="off"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Phone</ion-label>
+            <ion-input type="tel" [(ngModel)]="loginData.phone" placeholder="+1234555" autocomplete="off"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Birthday</ion-label>
+            <ion-datetime [(ngModel)]="loginData.birthday_value" pickerFormat="MMM D YYYY" displayFormat="MMM D, YYYY"></ion-datetime>
+        </ion-item>
+        <div style="margin-top: 20px;">
+            <button ion-button full block large round color="primary" (click)="registerClick()">Update</button>
+        </div>
+    </div>
+</ion-content>

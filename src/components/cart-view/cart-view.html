@@ -1,0 +1,47 @@
+<div padding>
+    <div *ngFor="let p of products;let idx=index" class="product-item">
+        <div class="image">
+            <img [src]="p.product.product_image" />
+        </div>
+        <div class="meta">
+            <div class="title" [innerHTML]="p.product.product_name"></div>
+            <div class="price">{{globals.currencySymbol}}{{p.product.price}}</div>
+            <div class="quantity-container">
+                <quantity-modifier [(quantity)]="p.quantity" (quantityChange)="quantityChanged(p)"></quantity-modifier>
+            </div>
+            <div class="delete">
+                <ion-icon name="ios-trash-outline" color="danger" (click)="deleteProduct(p,idx)"></ion-icon>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div padding class="cost-breakdown">
+    <div class="cost total">
+        <div class="title">Cart Total:</div>
+        <div class="price">{{globals.currencySymbol}}{{cart_total}}</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="cost" *ngIf="show_shipping">
+        <div class="title">Shipping &amp; Handling:</div>
+        <div class="price">Free</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="cost" *ngIf="show_tax">
+        <div class="title">Tax ({{tax_percentage}}%):</div>
+        <div class="price">{{globals.currencySymbol}}{{tax}}</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="cost" *ngIf="show_discount">
+        <div class="title">Discount ({{discount_percentage}}%):<span *ngIf="coupon_code!=''"><br />({{coupon_code}})</span></div>
+        <div class="price">- {{globals.currencySymbol}}{{discount}}</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="separator"></div>
+    <div class="cost total">
+        <div class="title">Total</div>
+        <div class="price">{{globals.currencySymbol}}{{total}}</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="separator"></div>
+</div>

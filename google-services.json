@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "593433809160",
+    "project_id": "tin-house-1d3b3",
+    "storage_bucket": "tin-house-1d3b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593433809160:android:4e6b27f7f08da6e77b1cbd",
+        "android_client_info": {
+          "package_name": "com.tinhouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593433809160-mldakntb0t9hfpsem1vfdmqt90butmtq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFLFhJIxu4ZB07eWTeVJ66gkDmhOa1G1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593433809160-mldakntb0t9hfpsem1vfdmqt90butmtq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Select Location
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="danger" (click)="backClick()">
+                <ion-icon name="md-close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+    <div class="map-container">
+        <div [id]="mapId" class="gmap"></div>
+    </div>
+</ion-content>
+<ion-footer padding *ngIf="showFooter">
+    <div text-center *ngIf="loading">
+        <ion-spinner></ion-spinner>
+    </div>
+    <ion-item *ngIf="!loading && selectedLocation!=null" style="padding: 0;">
+        <ion-input type="text" maxlength="30" [(ngModel)]="addressTitle" placeholder="Enter name of this address"></ion-input>
+    </ion-item>
+    <div class="full-address" *ngIf="!loading">
+        {{fullAddress}}
+    </div>
+    <div class="done-button" *ngIf="!loading">
+        <button ion-button block large round color="primary" (click)="doneClick()">DONE</button>
+    </div>
+</ion-footer>

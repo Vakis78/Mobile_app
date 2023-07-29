@@ -1,0 +1,23 @@
+page-profile {
+    .item {
+        padding-left: 0 !important;
+    }
+
+    .profile-item {
+        font-size: 1.70rem;
+        color: color($colors,primary);
+    }
+
+    .profile-item .label {
+        color: color($colors,primary);
+        font-weight: 400;
+    }
+
+    .profile-item .icon {
+        color: color($colors,primary);
+    }
+
+    .profile-item.logout .label,.profile-item.logout .icon {
+        color: color($colors,danger);
+    }
+}
